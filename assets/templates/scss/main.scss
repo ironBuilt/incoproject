@@ -1,0 +1,102 @@
+/* UI */
+
+@import '_ui.scss';
+
+/* SECTION */
+
+html,
+body {
+    background: #fff;
+    color: black;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+    overflow-x: hidden;
+}
+
+/* NAVIGATION */
+
+header {
+    height: 30px;
+    background-color: #171a43;
+    color: aliceblue;
+    border-top: 2px solid #5c1d82;
+}
+.header li {
+    float: left;
+    padding: 0.2em 1em 0 1em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 0.8em;
+}
+nav {
+    height: 100px;
+}
+.navigation li + li {
+    float: right;
+    padding: 1em;
+    margin-top: 20px;
+    a {
+        color: #663399;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        text-decoration: none;
+        padding-bottom: 0.9em;
+        @include transition( all 0.3s ease-in-out 0s);
+        position: relative;
+    }
+    a:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        bottom: 0;
+        background-color: #cc3300;
+        visibility: hidden;
+        @include transform(scaleX(0));
+        @include transition(all 0.3s ease-in-out 0s)
+    }
+    a:hover {
+        color: #cc3300;
+    }
+    a:hover:before {
+        visibility: visible;
+        @include transform(scaleX(1));
+    }
+}
+.logo {
+    padding: 0;
+    width: 65px;
+    position: absolute;
+    margin-top: 5px;
+    margin-left: 5%;
+}
+
+/* HERO SECTION */
+
+.hero {
+    background-image: url('../img/stock1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* ABOUT SECTION */
+
+.about {
+    height: 100vh;
+    background-color: pink;
+}
+
+/* LOADING SCREEN */
+
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: red;
+}
+
+/* RESPONSIVE */
+
+@import '_responsive.scss';

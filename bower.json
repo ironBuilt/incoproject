@@ -1,0 +1,26 @@
+{
+    "name": "Another ironBuilt Project",
+    "version": "1.0.0",
+    "authors": [
+    "Andy <contact@ironbuilt.com>"
+  ],
+    "main": "index.html",
+    "moduleType": [
+    "amd",
+    "es6",
+    "globals",
+    "node"
+  ],
+    "license": "MIT",
+    "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+    "dependencies": {
+        "jquery": null,
+        "requirejs-plugins": null
+    }
+}
